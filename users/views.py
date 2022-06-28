@@ -37,6 +37,7 @@ class UserViewsPrivate(APIView):
   
     def delete(self, request, id, format=None):
         user_id=Middlewares.decode(request.headers)
+        
         tipo = self.get_object(user_id)
         data = UserSerializer(tipo).data
         if((user_id == id) or (data["tipo"]=="admin")):
@@ -52,6 +53,7 @@ class UserViewsPrivate(APIView):
             return Response({'detail':"Não autorizado"})
 
     def put(self, request, id, format=None):
+        
         user_id=Middlewares.decode(request.headers)
         tipo = self.get_object(user_id)
         data = UserSerializer(tipo).data

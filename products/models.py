@@ -10,8 +10,8 @@ class Category(models.Model):
     create_at = models.DateTimeField(auto_now_add=True)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    class Meta:
-        db_table = 'categories'
+    # class Meta:
+    #     db_table = 'categories'
 
 class Product(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
@@ -21,5 +21,5 @@ class Product(models.Model):
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
 
-    class Meta:
-        db_table = 'products'
+    # class Meta:
+    #     db_table = 'products'

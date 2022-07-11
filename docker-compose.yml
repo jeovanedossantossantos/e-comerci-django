@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  products:
+    container_name: django-e-commerce
+    image: django-docker:0.0.1
+    build: .
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: "root"
+      DB_PASSWORD: "123456"
+      DB_NAME: postgres
+
+    
+
+  db:
+    container_name: postgres-e-commerce
+    image: postgres:12.0-alpine
+    volumes:
+      - ./db:/var/lib/postgresql/data/
+    environment:
+      POSTGRES_USER: "root"
+      POSTGRES_PASSWORD: "123456"
+      POSTGRES_DB: "e-commerce"
+    ports:
+      - "5432:5432"
+    
+     
+
+ 

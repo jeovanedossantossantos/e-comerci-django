@@ -13,5 +13,7 @@ urlpatterns = [
      path('user/public/<id>/',UserViewsPublic.as_view()),
      path('token/', TokenObtainPairView.as_view() ),
      path('token/refresh/', TokenRefreshView.as_view()),
+    
+     # path('token/refresh/', TokenRefreshView.as_view()),
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

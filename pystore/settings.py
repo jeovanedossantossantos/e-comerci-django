@@ -86,14 +86,23 @@ WSGI_APPLICATION = 'pystore.wsgi.application'
 #     }
 # }
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': config('POSTGRES_DB', 'e-commerce'),  # postgres
+    #     'USER': config('POSTGRES_USER', 'root'),
+    #     'PASSWORD': config('POSTGRES_PASSWORD', '123456'),
+    #     # 'db' caso exista um serviço com esse nome.
+    #     'HOST': config('db', '127.0.0.1'),
+    #     'PORT': 5432,
+    # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('POSTGRES_DB', 'db'),  # postgres
-        'USER': config('POSTGRES_USER', 'postgres'),
-        'PASSWORD': config('POSTGRES_PASSWORD', 'postgres'),
+        'NAME': 'e-commerce',
+        'USER':  'root',
+        'PASSWORD': '123456',
         # 'db' caso exista um serviço com esse nome.
-        'HOST': config('DB_HOST', '127.0.0.1'),
-        'PORT': 5433,
+        'HOST':  'db',
+        'PORT': "5432",
     }
 }
 

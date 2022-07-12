@@ -4,8 +4,8 @@
 
 # Docker
 
-        docker-compose up --build
-pytest --cov --cov-report=html
+        docker compose up --build
+        pytest --cov --cov-report=html
 
 # CONFIGURAÇÕES A SERM FEITAS PARA CRIAR O PROJETO
 

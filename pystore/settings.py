@@ -78,23 +78,7 @@ WSGI_APPLICATION = 'pystore.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-# DATABASES = {
-  
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': config('POSTGRES_DB', 'e-commerce'),  # postgres
-    #     'USER': config('POSTGRES_USER', 'root'),
-    #     'PASSWORD': config('POSTGRES_PASSWORD', '123456'),
-    #     # 'db' caso exista um serviço com esse nome.
-    #     'HOST': config('db', '127.0.0.1'),
-    #     'PORT': 5432,
-    # }
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'e-commerce',
@@ -157,5 +141,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = "users.User"
 # MEDIA
 
-# MEDIA_URL = "/media/"
-# MEDIA_URL = BASE_DIR / 'media'

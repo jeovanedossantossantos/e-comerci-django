@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'pystore.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'e-commerce',
-        'USER':  'root',
-        'PASSWORD': '123456',
+        'NAME': config('POSTGRES_DB'),
+        'USER':  config('POSTGRES_USER'),
+        'PASSWORD': config('POSTGRES_PASSWORD'),
         # 'db' caso exista um serviço com esse nome.
         'HOST':  'db',
         'PORT': "5432",

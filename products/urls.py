@@ -5,6 +5,7 @@ from products.views import CreateCategoryView
 urlpatterns = [
     path('register/', CreateCategoryView.as_view()),
     path('list/', CreateCategoryView.as_view()),
-    path('<id>/', CreateCategoryView.as_view())
+    path('<id>/', CreateCategoryView.as_view()),
+    
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

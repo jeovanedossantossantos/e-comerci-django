@@ -8,7 +8,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 # https://github.com/rg3915/gallery/blob/master/gallery
 urlpatterns = [
      path('user/', csrf_exempt(CreateUserView.as_view())),
-     path('user/teste/list/',UserViewsPublic.ListUsersView.as_view()),
+     path('user/list/',UserViewsPublic.ListUsersView.as_view()),
      path('user/private/<id>/',UserViewsPrivate.as_view()),
      path('user/public/<id>/',UserViewsPublic.as_view()),
      path('token/', TokenObtainPairView.as_view() ),

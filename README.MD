@@ -25,6 +25,8 @@
         python manage.py sqlflush
         pip install pymysql
         pip install django-enum-choices
+        
+        
 # CONFIGURAÇÕES A SEREM FEITAS NO settings.py
 
 
@@ -54,6 +56,7 @@
                     'rest_framework.persmissions.IsAuthenticatedOrReadOnly'
                 )
             }
+            
 
 # LISTA DE MODULOS QE FOI USADO NO PROJETO
 
@@ -66,4 +69,5 @@
 
         python manage.py shell  
         from rest_framework.renderers import JSONRenderer
+        
 

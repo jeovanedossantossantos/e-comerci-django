@@ -11,7 +11,7 @@
 
 
         python3.7 -m venv <nome da venv>
-        source env/bin/activate  # On Windows use `env\Scripts\activate`
+        source env/bin/activate  # On Windows use `env\Scripts\activate` ou env\Scripts\activate.bat
         source venv/Scripts/activate
 
         pip install django==2.2.9
